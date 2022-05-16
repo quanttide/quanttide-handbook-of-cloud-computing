@@ -15,25 +15,15 @@ updated_date: 2022-03-25
 ```markdown
 - README.md
 - serverless.yml
-- install_scf_requirements.py (recommended)
-- requirements.txt (optional)
 - .env (ignored)
 - .gitignore
 - <scf>/
   - index.py
   - requirements.txt (recommended)
-  - serverless.yml
   - <module>.py (optional)
   - <package> (optional)
     - __init__.py 
     - <module>.py 
-- db/ (recommended)
-  - serverless.yml
-- cos/ (recommended)
-  - serverless.yml 
-- workflow/ (recommended)
-  - workflow.json
-  - serverless.yml
 - docs/
   - README.md
   - <section>/ (recommended)
@@ -44,11 +34,11 @@ updated_date: 2022-03-25
 注意：
 
 - recommended标记表示尽量有或者大部分情况会有，建议开发者处理；optional表示可选，不需要可以不用；不标记的为必须。
-- 云函数（`<scf>/`文件夹）可以有单个也可以有多个。因此此项目规范实际上不像官方文档给的建议一样区分单项目和多项目。
+- 云函数（`<scf>/`文件夹）可以有单个也可以有多个。因此此项目规范实际上不像官方文档给的建议一样区分单函数和多函数，建议把单函数也当做多函数以方便灵活拓展新函数。
 - 每个云函数下可以有0-N个Python模块或包（`<module>.py`文件和`<package>`文件夹），根据项目需要决定即可。
 - 文档文件夹下可以有多个文件夹(`<section>`/)和文件（<doc>.md），用Markdown格式写即可。
 
-## 根目录`serverless.yml`
+## `serverless.yml`
 
 根目录的配置通常为
 
