@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>函数计算项目框架 &#8212; My Jupyter Book</title>
+    <title>项目框架 &#8212; 量潮Serverless手册</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -92,7 +92,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
+      <h1 class="site-logo" id="site-title">量潮Serverless手册</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -111,18 +111,47 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   函数计算项目框架
+   项目框架
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../devops/README.html">
    DevOps流程
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../devops/serverless_framework.html">
+     Serverless Framework部署函数计算
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../devops/ci.html">
+     持续集成
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../function_computing/README.html">
    函数计算
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../function_computing/file_storage.html">
+     函数计算挂载文件存储
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -275,11 +304,6 @@ title="Print to PDF"
    环境变量
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#git">
-   Git配置
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -289,7 +313,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>函数计算项目框架</h1>
+                <h1>项目框架</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -318,11 +342,6 @@ title="Print to PDF"
    环境变量
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#git">
-   Git配置
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -334,7 +353,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>函数计算项目框架<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<h1>项目框架<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
 <p>本文通常在<strong>创建项目</strong>时使用，在后续开发过程中一般不需要再改动项目结构，具体文件配置通常在后续开发过程中需要调整。</p>
 <section id="id2">
 <h2>文件结构<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
@@ -381,10 +400,6 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">.env</span></code>文件（也可以是<code class="docutils literal notranslate"><span class="pre">*.env</span></code>或<code class="docutils literal notranslate"><span class="pre">.env.*</span></code>）。</p>
 <p>环境变量在本地项目配置并加入<code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>。上述团队模板在“部署”步骤从构建环境的环境变量生成临时<code class="docutils literal notranslate"><span class="pre">.env</span></code>，需要开发者维护各个项目的构建计划指定写入环境变量文件的具体环境变量，操作方法在后面介绍。</p>
 <p>请开发者特别注意<strong>不要把环境变量文件传入Git</strong>！通常环境变量中存放的变量是项目的敏感变量，比如数据库密码、API密钥等等。在代码审核或后续上线中出现此类问题应当被视为<strong>工程事故</strong>。因此，请开发者特别注意检查环境变量文件是否被过滤，本地开发时IDE通常有专门的颜色提示被Git过滤的文件，第一次提交时请确认环境变量文件没有被上传，否则应当根据第二章相关内容及时删除Git历史。</p>
-</section>
-<section id="git">
-<h2>Git配置<a class="headerlink" href="#git" title="Permalink to this headline">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>文件配置参考<span class="xref myst">.gitignore文件规范</span></p>
 </section>
 </section>
 
@@ -436,7 +451,7 @@ title="Print to PDF"
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By The Jupyter Book community<br/>
+    By 量潮科技<br/>
   
       &copy; Copyright 2022.<br/>
 </p>
