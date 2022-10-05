@@ -1,0 +1,6 @@
+format: jb-book
+root: README.md
+chapters:
+  - file: project_structure/README.md
+  - file: devops/README.md
+  - file: function_computing/README.md
