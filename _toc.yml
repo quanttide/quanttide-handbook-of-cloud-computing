@@ -3,4 +3,9 @@ root: README.md
 chapters:
   - file: project_structure/README.md
   - file: devops/README.md
+    sections:
+      - file: devops/serverless_framework.md
+      - file: devops/ci.md
   - file: function_computing/README.md
+    sections:
+      - file: function_computing/file_storage.md
