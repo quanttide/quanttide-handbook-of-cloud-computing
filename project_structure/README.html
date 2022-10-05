@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>函数计算项目框架 &#8212; My Jupyter Book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DevOps流程" href="../devops/README.html" />
+    <link rel="prev" title="量潮Serverless手册" href="../README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    量潮Serverless手册
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   函数计算项目框架
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../devops/README.html">
+   DevOps流程
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../function_computing/README.html">
+   函数计算
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/project_structure/README.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   文件结构
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serverless-yml">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     serverless.yml
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   环境变量
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git">
+   Git配置
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>函数计算项目框架</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   文件结构
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serverless-yml">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     serverless.yml
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   环境变量
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git">
+   Git配置
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>函数计算项目框架<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<p>本文通常在<strong>创建项目</strong>时使用，在后续开发过程中一般不需要再改动项目结构，具体文件配置通常在后续开发过程中需要调整。</p>
+<section id="id2">
+<h2>文件结构<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>这里使用Markdown格式表达的项目文件和文件夹结构，其中<code class="docutils literal notranslate"><span class="pre">&lt;dir_name&gt;/</span></code>表示文件夹。</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">-</span> README.md
+<span class="k">-</span> serverless.yml
+<span class="k">-</span> .env (ignored)
+<span class="k">-</span> .gitignore
+<span class="k">-</span> &lt;scf&gt;/
+  <span class="k">-</span> index.py
+  <span class="k">-</span> requirements.txt (recommended)
+  <span class="k">-</span> &lt;module&gt;.py (optional)
+  <span class="k">-</span> &lt;package&gt; (optional)
+    <span class="k">-</span> <span class="gs">__init__</span>.py 
+    <span class="k">-</span> &lt;module&gt;.py 
+<span class="k">-</span> docs/
+  <span class="k">-</span> README.md
+  <span class="k">-</span> &lt;section&gt;/ (recommended)
+    <span class="k">-</span> &lt;doc&gt;.md
+  <span class="k">-</span> &lt;doc&gt;.md (recommended)
+</pre></div>
+</div>
+<p>注意：</p>
+<ul class="simple">
+<li><p>recommended标记表示尽量有或者大部分情况会有，建议开发者处理；optional表示可选，不需要可以不用；不标记的为必须。</p></li>
+<li><p>云函数（<code class="docutils literal notranslate"><span class="pre">&lt;scf&gt;/</span></code>文件夹）可以有单个也可以有多个。因此此项目规范实际上不像官方文档给的建议一样区分单函数和多函数，建议把单函数也当做多函数以方便灵活拓展新函数。</p></li>
+<li><p>每个云函数下可以有0-N个Python模块或包（<code class="docutils literal notranslate"><span class="pre">&lt;module&gt;.py</span></code>文件和<code class="docutils literal notranslate"><span class="pre">&lt;package&gt;</span></code>文件夹），根据项目需要决定即可。</p></li>
+<li><p>文档文件夹下可以有多个文件夹(<code class="docutils literal notranslate"><span class="pre">&lt;section&gt;</span></code>/)和文件（<doc>.md），用Markdown格式写即可。</p></li>
+</ul>
+</section>
+<section id="serverless-yml">
+<h2><code class="docutils literal notranslate"><span class="pre">serverless.yml</span></code><a class="headerlink" href="#serverless-yml" title="Permalink to this headline">#</a></h2>
+<p>根目录的配置通常为</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;project_name&gt;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${env:STAGE}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>其中<code class="docutils literal notranslate"><span class="pre">&lt;project_name&gt;</span></code>是项目名称，在云资源配置文件中以<code class="docutils literal notranslate"><span class="pre">${app}</span></code>的形式被使用以命名函数计算，通常加在名称开头区分项目资源。</p>
+<p><code class="docutils literal notranslate"><span class="pre">${env:&lt;ENV_VARIABLE&gt;}</span></code>是框架规定的传入环境变量的格式，<code class="docutils literal notranslate"><span class="pre">STAGE</span></code>为框架规定的环境标识，类似于自建标准中的<code class="docutils literal notranslate"><span class="pre">ENV</span></code>。在云资源配置文件中以<code class="docutils literal notranslate"><span class="pre">${stage}</span></code>的形式被使用以命名函数计算，通常加在名称末尾区分环境资源。</p>
+<p>默认地域、私有网络等项目级别的参数在云资源配置文件设置，直接在<code class="docutils literal notranslate"><span class="pre">inputs</span></code>下配置以<code class="docutils literal notranslate"><span class="pre">${env:&lt;ENV_VARIABLE&gt;}</span></code>的格式制定，同时需要通过环境变量传入以上变量。这样做的原因是，<code class="docutils literal notranslate"><span class="pre">inputs</span></code>下的参数依赖于<code class="docutils literal notranslate"><span class="pre">component</span></code>配置（指定云函数、工作流等），在根目录配置文件设置的的<code class="docutils literal notranslate"><span class="pre">inputs</span></code>的子配置项在云资源配置文件<strong>无法使用</strong>；设置在环境变量里是为了方便调整不同环境的配置，同时由于被Git过滤也可以<strong>保证安全</strong>。</p>
+</section>
+<section id="id3">
+<h2>环境变量<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">.env</span></code>文件（也可以是<code class="docutils literal notranslate"><span class="pre">*.env</span></code>或<code class="docutils literal notranslate"><span class="pre">.env.*</span></code>）。</p>
+<p>环境变量在本地项目配置并加入<code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>。上述团队模板在“部署”步骤从构建环境的环境变量生成临时<code class="docutils literal notranslate"><span class="pre">.env</span></code>，需要开发者维护各个项目的构建计划指定写入环境变量文件的具体环境变量，操作方法在后面介绍。</p>
+<p>请开发者特别注意<strong>不要把环境变量文件传入Git</strong>！通常环境变量中存放的变量是项目的敏感变量，比如数据库密码、API密钥等等。在代码审核或后续上线中出现此类问题应当被视为<strong>工程事故</strong>。因此，请开发者特别注意检查环境变量文件是否被过滤，本地开发时IDE通常有专门的颜色提示被Git过滤的文件，第一次提交时请确认环境变量文件没有被上传，否则应当根据第二章相关内容及时删除Git历史。</p>
+</section>
+<section id="git">
+<h2>Git配置<a class="headerlink" href="#git" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>文件配置参考<span class="xref myst">.gitignore文件规范</span></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./project_structure"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../README.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">量潮Serverless手册</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../devops/README.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">DevOps流程</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
