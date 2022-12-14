@@ -6,6 +6,11 @@ chapters:
     sections:
       - file: devops/serverless_framework.md
       - file: devops/ci.md
-  - file: function_computing/README.md
+  - file: stateful/README.md
     sections:
-      - file: function_computing/file_storage.md
+      - file: stateful/file_storage.md
+  - file: orchestration/workflow.md
+  - file: layers/README.md
+  - file: web_frameworks/README.md
+    sections:
+      - web_frameworks/django.md
