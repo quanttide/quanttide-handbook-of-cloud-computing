@@ -1,16 +1,18 @@
 format: jb-book
-root: README.md
-chapters:
-  - file: project_structure/README.md
-  - file: devops/README.md
-    sections:
-      - file: devops/serverless_framework.md
-      - file: devops/ci.md
-  - file: stateful/README.md
-    sections:
-      - file: stateful/file_storage.md
-  - file: orchestration/workflow.md
-  - file: layers/README.md
-  - file: web_frameworks/README.md
-    sections:
-      - web_frameworks/django.md
+root: index.md
+parts: 
+  - caption: Serverless
+    chapters:
+      - file: faas/project_structure/README.md
+      - file: faas/devops/README.md
+        sections:
+          - file: faas/devops/serverless_framework.md
+          - file: faas/devops/ci.md
+      - file: faas/stateful/README.md
+        sections:
+          - file: faas/stateful/file_storage.md
+      - file: faas/orchestration/workflow.md
+      - file: faas/layers/README.md
+      - file: faas/web_frameworks/README.md
+        sections:
+          - file: faas/web_frameworks/django.md
