@@ -1,21 +1,21 @@
 format: jb-book
 root: index.md
 parts: 
-  - caption: IaaS
+  - caption: FaaS
     chapters:
-      - file: faas/project_structure/README.md
-      - file: faas/devops/README.md
+      - file: fass/project_structure/README.md
+      - file: fass/devops/README.md
         sections:
-          - file: faas/devops/serverless_framework.md
-          - file: faas/devops/ci.md
-      - file: faas/stateful/README.md
+          - file: fass/devops/serverless_framework.md
+          - file: fass/devops/ci.md
+      - file: fass/stateful/README.md
         sections:
-          - file: faas/stateful/file_storage.md
-      - file: faas/orchestration/workflow.md
-      - file: faas/layers/README.md
-      - file: faas/web_frameworks/README.md
+          - file: fass/stateful/file_storage.md
+      - file: fass/orchestration/workflow.md
+      - file: fass/layers/README.md
+      - file: fass/web_frameworks/README.md
         sections:
-          - file: faas/web_frameworks/django.md
+          - file: fass/web_frameworks/django.md
   - caption: SaaS
     chapters:
     - file: saas/meeting/README.md
