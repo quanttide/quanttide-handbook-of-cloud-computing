@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>项目框架 &#8212; 量潮云计算手册</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'fass/project_structure/README';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="DevOps流程" href="../devops/README.html" />
+    <link rel="prev" title="量潮云计算手册" href="../../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">量潮云计算手册</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    量潮云计算手册
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">FaaS</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">项目框架</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../devops/README.html">DevOps流程</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../devops/serverless_framework.html">Serverless Framework部署函数计算</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devops/ci.html">持续集成</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../stateful/README.html">有状态</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../stateful/file_storage.html">函数计算挂载文件存储</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../orchestration/workflow.html">工作流编排</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../layers/README.html">层管理</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../web_frameworks/README.html">Web框架</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../web_frameworks/django.html">Django</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SaaS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../saas/meeting/README.html">会议</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../saas/meeting/tencent_meeting.html">腾讯会议</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/fass/project_structure/README.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>项目框架</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">适用范围</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">工作原则</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">文件结构</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serverless-yml"><code class="docutils literal notranslate"><span class="pre">serverless.yml</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">环境变量</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">快速检查</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>项目框架<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>项目框架章节记录云函数项目的基础目录、配置文件和文档结构。它的目标不是规定唯一答案，而是给新项目一个能持续演进的起点。</p>
+<section id="id2">
+<h2>适用范围<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>新建函数计算或 Serverless 项目。</p></li>
+<li><p>需要把代码、配置、文档和环境变量分开的项目。</p></li>
+<li><p>需要多个云函数、多个模块或多个文档章节协同的项目。</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>工作原则<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>入口文件要明确。</p></li>
+<li><p>配置文件要集中管理。</p></li>
+<li><p>敏感配置不进 Git。</p></li>
+<li><p>文档要随着项目结构一起演进。</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>文件结构<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>这里使用Markdown格式表达的项目文件和文件夹结构，其中<code class="docutils literal notranslate"><span class="pre">&lt;dir_name&gt;/</span></code>表示文件夹。</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">-</span><span class="w"> </span>README.md
+<span class="k">-</span><span class="w"> </span>serverless.yml
+<span class="k">-</span><span class="w"> </span>.env (ignored)
+<span class="k">-</span><span class="w"> </span>.gitignore
+<span class="k">-</span><span class="w"> </span>&lt;scf&gt;/
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>index.py
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>requirements.txt (recommended)
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>&lt;module&gt;.py (optional)
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>&lt;package&gt; (optional)
+<span class="w">    </span><span class="k">-</span><span class="w"> </span><span class="gs">__init__</span>.py 
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>&lt;module&gt;.py 
+<span class="k">-</span><span class="w"> </span>docs/
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>README.md
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>&lt;section&gt;/ (recommended)
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>&lt;doc&gt;.md
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>&lt;doc&gt;.md (recommended)
+</pre></div>
+</div>
+<p>注意：</p>
+<ul class="simple">
+<li><p>recommended标记表示尽量有或者大部分情况会有，建议开发者处理；optional表示可选，不需要可以不用；不标记的为必须。</p></li>
+<li><p>云函数（<code class="docutils literal notranslate"><span class="pre">&lt;scf&gt;/</span></code>文件夹）可以有单个也可以有多个。因此此项目规范实际上不像官方文档给的建议一样区分单函数和多函数，建议把单函数也当做多函数以方便灵活拓展新函数。</p></li>
+<li><p>每个云函数下可以有0-N个Python模块或包（<code class="docutils literal notranslate"><span class="pre">&lt;module&gt;.py</span></code>文件和<code class="docutils literal notranslate"><span class="pre">&lt;package&gt;</span></code>文件夹），根据项目需要决定即可。</p></li>
+<li><p>文档文件夹下可以有多个文件夹(<code class="docutils literal notranslate"><span class="pre">&lt;section&gt;</span></code>/)和文件（<doc>.md），用Markdown格式写即可。</p></li>
+</ul>
+</section>
+<section id="serverless-yml">
+<h2><code class="docutils literal notranslate"><span class="pre">serverless.yml</span></code><a class="headerlink" href="#serverless-yml" title="Link to this heading">#</a></h2>
+<p>根目录的配置通常为</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;project_name&gt;</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${env:STAGE}</span>
+</pre></div>
+</div>
+<p>其中<code class="docutils literal notranslate"><span class="pre">&lt;project_name&gt;</span></code>是项目名称，在云资源配置文件中以<code class="docutils literal notranslate"><span class="pre">${app}</span></code>的形式被使用以命名函数计算，通常加在名称开头区分项目资源。</p>
+<p><code class="docutils literal notranslate"><span class="pre">${env:&lt;ENV_VARIABLE&gt;}</span></code>是框架规定的传入环境变量的格式，<code class="docutils literal notranslate"><span class="pre">STAGE</span></code>为框架规定的环境标识，类似于自建标准中的<code class="docutils literal notranslate"><span class="pre">ENV</span></code>。在云资源配置文件中以<code class="docutils literal notranslate"><span class="pre">${stage}</span></code>的形式被使用以命名函数计算，通常加在名称末尾区分环境资源。</p>
+<p>默认地域、私有网络等项目级别的参数在云资源配置文件设置，直接在<code class="docutils literal notranslate"><span class="pre">inputs</span></code>下配置以<code class="docutils literal notranslate"><span class="pre">${env:&lt;ENV_VARIABLE&gt;}</span></code>的格式制定，同时需要通过环境变量传入以上变量。这样做的原因是，<code class="docutils literal notranslate"><span class="pre">inputs</span></code>下的参数依赖于<code class="docutils literal notranslate"><span class="pre">component</span></code>配置（指定云函数、工作流等），在根目录配置文件设置的的<code class="docutils literal notranslate"><span class="pre">inputs</span></code>的子配置项在云资源配置文件<strong>无法使用</strong>；设置在环境变量里是为了方便调整不同环境的配置，同时由于被Git过滤也可以<strong>保证安全</strong>。</p>
+</section>
+<section id="id5">
+<h2>环境变量<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">.env</span></code>文件（也可以是<code class="docutils literal notranslate"><span class="pre">*.env</span></code>或<code class="docutils literal notranslate"><span class="pre">.env.*</span></code>）。</p>
+<p>环境变量在本地项目配置并加入<code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>。上述团队模板在“部署”步骤从构建环境的环境变量生成临时<code class="docutils literal notranslate"><span class="pre">.env</span></code>，需要开发者维护各个项目的构建计划指定写入环境变量文件的具体环境变量，操作方法在后面介绍。</p>
+<p>请开发者特别注意<strong>不要把环境变量文件传入Git</strong>！通常环境变量中存放的变量是项目的敏感变量，比如数据库密码、API密钥等等。在代码审核或后续上线中出现此类问题应当被视为<strong>工程事故</strong>。因此，请开发者特别注意检查环境变量文件是否被过滤，本地开发时IDE通常有专门的颜色提示被Git过滤的文件，第一次提交时请确认环境变量文件没有被上传，否则应当根据第二章相关内容及时删除Git历史。</p>
+</section>
+<section id="id6">
+<h2>快速检查<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>根目录是否有 <code class="docutils literal notranslate"><span class="pre">serverless.yml</span></code></p></li>
+<li><p>云函数目录是否清楚</p></li>
+<li><p>文档目录是否齐全</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.env</span></code> 是否被 Git 忽略</p></li>
+<li><p>环境变量是否按环境分开管理</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./fass/project_structure"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">量潮云计算手册</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../devops/README.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">DevOps流程</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">适用范围</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">工作原则</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">文件结构</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serverless-yml"><code class="docutils literal notranslate"><span class="pre">serverless.yml</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">环境变量</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">快速检查</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By 量潮科技
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
